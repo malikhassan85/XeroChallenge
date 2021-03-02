@@ -1,12 +1,18 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\XeroChallenge.Application\XeroChallenge.Application.csproj" />
-    <ProjectReference Include="..\XeroChallenge.Infrastructure.DataAccess\XeroChallenge.Infrastructure.DataAccess.csproj" />
+    <PackageReference Include="Serilog" Version="2.10.0" />
+    <PackageReference Include="Serilog.AspNetCore" Version="3.4.0" />
+    <PackageReference Include="Serilog.Sinks.RollingFile" Version="3.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\XeroChallenge.Domain\XeroChallenge.Domain.csproj" />
+    <ProjectReference Include="..\XeroChallenge.Infrastructure.DataAccess\XeroChallenge.Infrastructure.Persistence.csproj" />
   </ItemGroup>
 
 </Project>

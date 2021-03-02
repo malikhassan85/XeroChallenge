@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "3kIgiS1bFvEmNETaX2O1jjfu++vxPth5l+IQ3KQ5a1XZHGkDp/DRkgbLgre3elvvWDno5ysf/GdR9Cu3LroQlw==",
+  "dgSpecHash": "uaUy/Hk0zT3KvpuUkRIpTCOJ3+3sNzapfvuJ/q6kyWDLZWfxtpNxXofr6xYsqsEufR+dBwHijTyYRR6HfyY3Lw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Malik\\source\\repos\\XeroChallenge\\XeroChallenge\\XeroChallenge.Domain.UnitTesting\\XeroChallenge.Domain.UnitTesting.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Malik\\.nuget\\packages\\coverlet.collector\\1.2.0\\coverlet.collector.1.2.0.nupkg.sha512",
     "C:\\Users\\Malik\\.nuget\\packages\\microsoft.codecoverage\\16.5.0\\microsoft.codecoverage.16.5.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.csharp\\4.0.1\\microsoft.csharp.4.0.1.nupkg.sha512",
+    "C:\\Users\\Malik\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\5.0.0\\microsoft.extensions.logging.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\Malik\\.nuget\\packages\\microsoft.net.test.sdk\\16.5.0\\microsoft.net.test.sdk.16.5.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.platforms\\1.0.1\\microsoft.netcore.platforms.1.0.1.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.netcore.targets\\1.0.1\\microsoft.netcore.targets.1.0.1.nupkg.sha512",

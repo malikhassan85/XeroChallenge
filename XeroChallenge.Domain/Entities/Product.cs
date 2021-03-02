@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace XeroChallenge.Domain.Entities
 {
-    public class Product
+    public class Product : IAggregateRoot
     {
         public Guid Id { get; set; }
 
@@ -16,20 +16,25 @@ namespace XeroChallenge.Domain.Entities
 
         public decimal DeliveryPrice { get; set; }
 
-        public bool IsNew { get; }
+        public bool IsNew => Id == Guid.Empty;
 
         public List<ProductOption> Options { get; set; }
 
-        public Product()
-        {
-            Id = Guid.NewGuid();
-            IsNew = true;
-        }
-
         public void RemoveProductOption(Guid productOptionId)
         {
-            var option = Options?.SingleOrDefault(p => p.Id == productOptionId);
-            Options?.Remove(option);
+            if (Options == null)
+                return;
+
+            var option = Options.SingleOrDefault(p => p.Id == productOptionId);
+            Options.Remove(option);
+        }
+
+        internal void AddProductOption(ProductOption productOption)
+        {
+            if (Options == null)
+                Options = new List<ProductOption>();
+
+            Options.Add(productOption);
         }
     }
 }

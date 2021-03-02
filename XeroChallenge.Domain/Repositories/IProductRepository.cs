@@ -1,18 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using XeroChallenge.Domain.Entities;
 
 namespace XeroChallenge.Domain.Repositories
 {
-    public interface IProductRepository
+    /// <summary>
+    /// Represents the interface for the product entity repository
+    /// </summary>
+    public interface IProductRepository : IRepository<Product>
     {
-        IEnumerable<Product> GetAll();
-
-        Product Get(Guid Id);
-
-        void Delete(Guid Id);
-
-        Guid Save(Product product);
+        Task<IEnumerable<Product>> GetAllByName(string name);
     }
 }

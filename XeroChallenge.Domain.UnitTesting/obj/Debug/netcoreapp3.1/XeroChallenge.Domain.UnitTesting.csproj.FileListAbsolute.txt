@@ -194,3 +194,4 @@ C:\Users\Malik\source\repos\XeroChallenge\XeroChallenge\XeroChallenge.Domain.Uni
 C:\Users\Malik\source\repos\XeroChallenge\XeroChallenge\XeroChallenge.Domain.UnitTesting\obj\Debug\netcoreapp3.1\XeroChallenge.Domain.UnitTesting.dll
 C:\Users\Malik\source\repos\XeroChallenge\XeroChallenge\XeroChallenge.Domain.UnitTesting\obj\Debug\netcoreapp3.1\XeroChallenge.Domain.UnitTesting.pdb
 C:\Users\Malik\source\repos\XeroChallenge\XeroChallenge\XeroChallenge.Domain.UnitTesting\obj\Debug\netcoreapp3.1\XeroChallenge.Domain.UnitTesting.genruntimeconfig.cache
+C:\Users\Malik\source\repos\XeroChallenge\XeroChallenge\XeroChallenge.Domain.UnitTesting\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll

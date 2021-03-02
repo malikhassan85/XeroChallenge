@@ -284,12 +284,8 @@ C:\Users\Malik\source\repos\XeroChallenge\XeroChallenge\XeroChallenge.Applicatio
 C:\Users\Malik\source\repos\XeroChallenge\XeroChallenge\XeroChallenge.Application.IntegrationTesting\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\e_sqlite3.dll
 C:\Users\Malik\source\repos\XeroChallenge\XeroChallenge\XeroChallenge.Application.IntegrationTesting\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\e_sqlite3.dll
 C:\Users\Malik\source\repos\XeroChallenge\XeroChallenge\XeroChallenge.Application.IntegrationTesting\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\e_sqlite3.dll
-C:\Users\Malik\source\repos\XeroChallenge\XeroChallenge\XeroChallenge.Application.IntegrationTesting\bin\Debug\netcoreapp3.1\XeroChallenge.Application.dll
 C:\Users\Malik\source\repos\XeroChallenge\XeroChallenge\XeroChallenge.Application.IntegrationTesting\bin\Debug\netcoreapp3.1\XeroChallenge.Domain.dll
-C:\Users\Malik\source\repos\XeroChallenge\XeroChallenge\XeroChallenge.Application.IntegrationTesting\bin\Debug\netcoreapp3.1\XeroChallenge.Infrastructure.DataAccess.dll
-C:\Users\Malik\source\repos\XeroChallenge\XeroChallenge\XeroChallenge.Application.IntegrationTesting\bin\Debug\netcoreapp3.1\XeroChallenge.Application.pdb
 C:\Users\Malik\source\repos\XeroChallenge\XeroChallenge\XeroChallenge.Application.IntegrationTesting\bin\Debug\netcoreapp3.1\XeroChallenge.Domain.pdb
-C:\Users\Malik\source\repos\XeroChallenge\XeroChallenge\XeroChallenge.Application.IntegrationTesting\bin\Debug\netcoreapp3.1\XeroChallenge.Infrastructure.DataAccess.pdb
 C:\Users\Malik\source\repos\XeroChallenge\XeroChallenge\XeroChallenge.Application.IntegrationTesting\obj\Debug\netcoreapp3.1\XeroChallenge.Application.IntegrationTesting.csprojAssemblyReference.cache
 C:\Users\Malik\source\repos\XeroChallenge\XeroChallenge\XeroChallenge.Application.IntegrationTesting\obj\Debug\netcoreapp3.1\XeroChallenge.Application.IntegrationTesting.AssemblyInfoInputs.cache
 C:\Users\Malik\source\repos\XeroChallenge\XeroChallenge\XeroChallenge.Application.IntegrationTesting\obj\Debug\netcoreapp3.1\XeroChallenge.Application.IntegrationTesting.AssemblyInfo.cs
@@ -298,3 +294,5 @@ C:\Users\Malik\source\repos\XeroChallenge\XeroChallenge\XeroChallenge.Applicatio
 C:\Users\Malik\source\repos\XeroChallenge\XeroChallenge\XeroChallenge.Application.IntegrationTesting\obj\Debug\netcoreapp3.1\XeroChallenge.Application.IntegrationTesting.dll
 C:\Users\Malik\source\repos\XeroChallenge\XeroChallenge\XeroChallenge.Application.IntegrationTesting\obj\Debug\netcoreapp3.1\XeroChallenge.Application.IntegrationTesting.pdb
 C:\Users\Malik\source\repos\XeroChallenge\XeroChallenge\XeroChallenge.Application.IntegrationTesting\obj\Debug\netcoreapp3.1\XeroChallenge.Application.IntegrationTesting.genruntimeconfig.cache
+C:\Users\Malik\source\repos\XeroChallenge\XeroChallenge\XeroChallenge.Application.IntegrationTesting\bin\Debug\netcoreapp3.1\XeroChallenge.Infrastructure.Persistence.dll
+C:\Users\Malik\source\repos\XeroChallenge\XeroChallenge\XeroChallenge.Application.IntegrationTesting\bin\Debug\netcoreapp3.1\XeroChallenge.Infrastructure.Persistence.pdb

@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "87JvD191ZOyp0mHdLr6DRF4cn4eAxvTcxabpz2R1bqutC86WLcHmO1GeacIRsc1RYknzhuaAgv9n27hn29KrtA==",
+  "dgSpecHash": "dMlzGC9sFZvA1MoaQItXkbysmyVHDquDtJSg9NS8OEjyLxwP6v0Ef69tZC94s9PgEPQs1zO7GKHaG6rHty0Hew==",
   "success": true,
   "projectFilePath": "C:\\Users\\Malik\\source\\repos\\XeroChallenge\\XeroChallenge\\XeroChallenge.Application.IntegrationTesting\\XeroChallenge.Application.IntegrationTesting.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Malik\\.nuget\\packages\\coverlet.collector\\1.2.0\\coverlet.collector.1.2.0.nupkg.sha512",
+    "C:\\Users\\Malik\\.nuget\\packages\\ensure.that\\10.0.0\\ensure.that.10.0.0.nupkg.sha512",
     "C:\\Users\\Malik\\.nuget\\packages\\microsoft.codecoverage\\16.5.0\\microsoft.codecoverage.16.5.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.csharp\\4.0.1\\microsoft.csharp.4.0.1.nupkg.sha512",
     "C:\\Users\\Malik\\.nuget\\packages\\microsoft.data.sqlite.core\\5.0.3\\microsoft.data.sqlite.core.5.0.3.nupkg.sha512",

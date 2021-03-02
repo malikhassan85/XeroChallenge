@@ -1,0 +1,3 @@
+[2021-03-02 13:45:08.724] [Information]  () <> Starting up...
+[2021-03-02 13:45:15.815] [Information]  () <XeroChallenge.Domain.Services.ProductService> Call repository to get product/s based on name value: null
+[2021-03-02 13:45:16.035] [Information]  () <XeroChallenge.Infrastructure.Persistence.Repositories.ProductRepository> Retrieving all products from database

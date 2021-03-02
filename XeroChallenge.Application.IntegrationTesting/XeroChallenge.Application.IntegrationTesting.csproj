@@ -29,9 +29,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\XeroChallenge.Application\XeroChallenge.Application.csproj" />
     <ProjectReference Include="..\XeroChallenge.Domain\XeroChallenge.Domain.csproj" />
-    <ProjectReference Include="..\XeroChallenge.Infrastructure.DataAccess\XeroChallenge.Infrastructure.DataAccess.csproj" />
+    <ProjectReference Include="..\XeroChallenge.Infrastructure.DataAccess\XeroChallenge.Infrastructure.Persistence.csproj" />
   </ItemGroup>
 
 </Project>

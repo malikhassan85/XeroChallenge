@@ -7,15 +7,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTesting", "UnitTesting"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IntegrationTesting", "IntegrationTesting", "{A10FEBFD-D6DA-41A2-9639-BF7DF642E373}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XeroChallenge.Application", "XeroChallenge.Application\XeroChallenge.Application.csproj", "{09C8AC69-7278-4080-89BE-EF92BDE73C73}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XeroChallenge.Domain.UnitTesting", "XeroChallenge.Domain.UnitTesting\XeroChallenge.Domain.UnitTesting.csproj", "{E122D2DE-72A2-4F0E-B02C-BAC4BD646981}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XeroChallenge.Application.UnitTesting", "XeroChallenge.Application.UnitTesting\XeroChallenge.Application.UnitTesting.csproj", "{8241E6CF-6B3A-4F86-99D5-C8FD3088C4BA}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XeroChallenge.Application.IntegrationTesting", "XeroChallenge.Application.IntegrationTesting\XeroChallenge.Application.IntegrationTesting.csproj", "{76A51F5D-7557-4CA6-9056-4D6CF8A32CE3}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XeroChallenge.Infrastructure.DataAccess", "XeroChallenge.Infrastructure.DataAccess\XeroChallenge.Infrastructure.DataAccess.csproj", "{A544F55D-25E0-4275-A039-4593522E27A8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XeroChallenge.Infrastructure.Persistence", "XeroChallenge.Infrastructure.DataAccess\XeroChallenge.Infrastructure.Persistence.csproj", "{A544F55D-25E0-4275-A039-4593522E27A8}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XeroChallenge.Domain", "XeroChallenge.Domain\XeroChallenge.Domain.csproj", "{A1038DDB-648D-498E-8C45-9AC45866F44A}"
 EndProject
@@ -27,10 +25,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{09C8AC69-7278-4080-89BE-EF92BDE73C73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{09C8AC69-7278-4080-89BE-EF92BDE73C73}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{09C8AC69-7278-4080-89BE-EF92BDE73C73}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{09C8AC69-7278-4080-89BE-EF92BDE73C73}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E122D2DE-72A2-4F0E-B02C-BAC4BD646981}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E122D2DE-72A2-4F0E-B02C-BAC4BD646981}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E122D2DE-72A2-4F0E-B02C-BAC4BD646981}.Release|Any CPU.ActiveCfg = Release|Any CPU

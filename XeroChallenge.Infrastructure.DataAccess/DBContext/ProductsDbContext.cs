@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Text;
 using XeroChallenge.Domain.Entities;
 
-namespace XeroChallenge.Infrastructure.DataAccess.DBContext
+namespace XeroChallenge.Infrastructure.Persistence.DBContext
 {
     public class ProductsDbContext : DbContext
     {
@@ -21,7 +21,7 @@ namespace XeroChallenge.Infrastructure.DataAccess.DBContext
             modelBuilder.Entity<Product>().HasKey(p => p.Id);
             modelBuilder.Entity<ProductOption>().HasKey(p => p.Id);
             modelBuilder.Entity<Product>()
-           .HasMany(b => b.Options).WithOne(p=>p.Product).HasForeignKey("ProductId").IsRequired();
+           .HasMany(b => b.Options).WithOne(p=>p.Product).HasForeignKey("ProductId").OnDelete(DeleteBehavior.Cascade).IsRequired();
         }
     }
 }

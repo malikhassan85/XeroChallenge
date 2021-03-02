@@ -5,8 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Ensure.That" Version="10.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\XeroChallenge.Domain\XeroChallenge.Domain.csproj" />
-    <ProjectReference Include="..\XeroChallenge.Infrastructure.DataAccess\XeroChallenge.Infrastructure.DataAccess.csproj" />
+    <ProjectReference Include="..\XeroChallenge.Infrastructure.DataAccess\XeroChallenge.Infrastructure.Persistence.csproj" />
   </ItemGroup>
 
 </Project>

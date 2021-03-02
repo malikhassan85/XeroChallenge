@@ -14,3 +14,4 @@ C:\Users\Malik\source\repos\XeroChallenge\XeroChallenge\XeroChallenge.Domain\obj
 C:\Users\Malik\source\repos\XeroChallenge\XeroChallenge\XeroChallenge.Domain\obj\Debug\netcoreapp3.1\XeroChallenge.Domain.csproj.CoreCompileInputs.cache
 C:\Users\Malik\source\repos\XeroChallenge\XeroChallenge\XeroChallenge.Domain\obj\Debug\netcoreapp3.1\XeroChallenge.Domain.dll
 C:\Users\Malik\source\repos\XeroChallenge\XeroChallenge\XeroChallenge.Domain\obj\Debug\netcoreapp3.1\XeroChallenge.Domain.pdb
+C:\Users\Malik\source\repos\XeroChallenge\XeroChallenge\XeroChallenge.Domain\obj\Debug\netcoreapp3.1\XeroChallenge.Domain.csprojAssemblyReference.cache

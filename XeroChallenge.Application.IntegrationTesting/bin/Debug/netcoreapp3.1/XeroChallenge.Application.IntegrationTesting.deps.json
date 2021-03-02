@@ -12,9 +12,8 @@
           "Microsoft.Extensions.Configuration.Abstractions": "5.0.0",
           "Microsoft.Extensions.Configuration.Json": "5.0.0",
           "Microsoft.NET.Test.Sdk": "16.5.0",
-          "XeroChallenge.Application": "1.0.0",
           "XeroChallenge.Domain": "1.0.0",
-          "XeroChallenge.Infrastructure.DataAccess": "1.0.0",
+          "XeroChallenge.Infrastructure.Persistence": "1.0.0",
           "coverlet.collector": "1.2.0",
           "xunit": "2.4.0",
           "xunit.runner.visualstudio": "2.4.0"
@@ -1106,27 +1105,21 @@
           "Microsoft.NET.Test.Sdk": "16.5.0"
         }
       },
-      "XeroChallenge.Application/1.0.0": {
-        "dependencies": {
-          "XeroChallenge.Domain": "1.0.0",
-          "XeroChallenge.Infrastructure.DataAccess": "1.0.0"
-        },
-        "runtime": {
-          "XeroChallenge.Application.dll": {}
-        }
-      },
       "XeroChallenge.Domain/1.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Logging.Abstractions": "5.0.0"
+        },
         "runtime": {
           "XeroChallenge.Domain.dll": {}
         }
       },
-      "XeroChallenge.Infrastructure.DataAccess/1.0.0": {
+      "XeroChallenge.Infrastructure.Persistence/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore.Sqlite": "5.0.3",
           "XeroChallenge.Domain": "1.0.0"
         },
         "runtime": {
-          "XeroChallenge.Infrastructure.DataAccess.dll": {}
+          "XeroChallenge.Infrastructure.Persistence.dll": {}
         }
       }
     }
@@ -1725,17 +1718,12 @@
       "path": "xunit.runner.visualstudio/2.4.0",
       "hashPath": "xunit.runner.visualstudio.2.4.0.nupkg.sha512"
     },
-    "XeroChallenge.Application/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
     "XeroChallenge.Domain/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "XeroChallenge.Infrastructure.DataAccess/1.0.0": {
+    "XeroChallenge.Infrastructure.Persistence/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

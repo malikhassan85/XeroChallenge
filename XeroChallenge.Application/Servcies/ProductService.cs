@@ -6,6 +6,8 @@ using XeroChallenge.Application.Exceptions;
 using XeroChallenge.Domain.Repositories;
 using System.Linq;
 using XeroChallenge.Domain.Entities;
+using EnsureThat;
+using System.Threading.Tasks;
 
 namespace XeroChallenge.Application.Services
 {
@@ -18,9 +20,9 @@ namespace XeroChallenge.Application.Services
             _productRepository = productRepository;
         }
 
-        public IEnumerable<ProductDto> GetAllProducts()
+        public async Task<IEnumerable<ProductDto>> GetAllProductsByName(string name)
         {
-            var productList = _productRepository.GetAll();
+            var productList = await _productRepository.GetAllByFilter(name);
 
             return productList?.Select(p => new ProductDto
             {
@@ -32,9 +34,9 @@ namespace XeroChallenge.Application.Services
             });
         }
 
-        public ProductDto GetProduct(Guid productId)
+        public async Task<ProductDto> GetProduct(Guid productId)
         {
-            var product = GetProductFromRepository(productId);
+            var product = await GetProductFromRepository(productId);
 
             return new ProductDto
             {
@@ -46,31 +48,57 @@ namespace XeroChallenge.Application.Services
             };
         }
 
-        public void DeleteProduct(Guid productId)
+        public async Task<Guid> CreateProduct(ProductDto productDto)
         {
-            _productRepository.Delete(productId);
-        }
+            if (productDto == null)
+                throw new ArgumentNullException(nameof(productDto));
 
+            if (productDto.Id != Guid.Empty)
+                throw new ArgumentException(nameof(productDto.Id), "Id should be empty when creating a new product");
 
-        public Guid SaveProduct(ProductDto product)
-        {
-            var entity = new Product
+            var entity = new Product()
             {
-                Id = product.Id,
-                Name = product.Name,
-                Description = product.Description,
-                Price = product.Price,
-                DeliveryPrice = product.DeliveryPrice
+                Name = productDto.Name,
+                Description = productDto.Description,
+                Price = productDto.Price,
+                DeliveryPrice = productDto.DeliveryPrice
             };
 
-            _productRepository.Save(entity);
+            await _productRepository.Save(entity);
 
             return entity.Id;
         }
 
-        public ProductOptionDto GetProductOption(Guid productId, Guid optionId)
+        public async Task<Guid> UpdateProduct(ProductDto productDto)
         {
-            var product = GetProductFromRepository(productId);
+            if (productDto == null)
+                throw new ArgumentNullException(nameof(productDto));
+
+            if (productDto.Id == Guid.Empty)
+                throw new ArgumentNullException(nameof(productDto.Id), "Id can't be empty when updating an existing product");
+
+            var entity = new Product
+            {
+                Id = productDto.Id,
+                Name = productDto.Name,
+                Description = productDto.Description,
+                Price = productDto.Price,
+                DeliveryPrice = productDto.DeliveryPrice
+            };
+
+            await _productRepository.Save(entity);
+
+            return entity.Id;
+        }
+
+        public async Task DeleteProduct(Guid productId)
+        {
+            await _productRepository.Delete(productId);
+        }
+
+        public async Task<ProductOptionDto> GetProductOption(Guid productId, Guid optionId)
+        {
+            var product = await GetProductFromRepository(productId);
             var productOption = product.Options.SingleOrDefault(p => p.Id == optionId);
 
             if (productOption == null)
@@ -85,9 +113,9 @@ namespace XeroChallenge.Application.Services
             };
         }
 
-        public IEnumerable<ProductOptionDto> GetProductOptions(Guid productId)
+        public async Task<IEnumerable<ProductOptionDto>> GetProductOptions(Guid productId)
         {
-            var product = GetProductFromRepository(productId);
+            var product = await GetProductFromRepository(productId);
 
             return product.Options.Select(p => new ProductOptionDto
             {
@@ -99,7 +127,7 @@ namespace XeroChallenge.Application.Services
         }
 
 
-        public Guid SaveProductOption(ProductOptionDto productOption)
+        public async Task<Guid> SaveProductOption(ProductOptionDto productOption)
         {
             throw new NotImplementedException();
         }
@@ -111,9 +139,9 @@ namespace XeroChallenge.Application.Services
             _productRepository.Save(product);
         }
 
-        private Product GetProductFromRepository(Guid Id)
+        private async Task<Product> GetProductFromRepository(Guid Id)
         {
-            var product = _productRepository.Get(Id);
+            var product = await _productRepository.Get(Id);
 
             if (product == null)
                 throw new ProductNotFoundException(Id);

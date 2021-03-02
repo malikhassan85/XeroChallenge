@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
 namespace XeroChallenge.Domain.Entities
 {
     public class ProductOption
@@ -14,12 +11,16 @@ namespace XeroChallenge.Domain.Entities
 
         public string Description { get; set; }
 
-        public bool IsNew { get; }
+        public bool IsNew => Id == Guid.Empty;
 
         public ProductOption()
         {
-            Id = Guid.NewGuid();
-            IsNew = true;
+        }
+
+        public void UpdateValues(ProductOption productOption)
+        {
+            Name = productOption.Name;
+            Description = productOption.Description;
         }
     }
 }

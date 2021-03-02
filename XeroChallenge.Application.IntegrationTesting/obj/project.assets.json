@@ -8,6 +8,15 @@
           "build/netstandard1.0/coverlet.collector.targets": {}
         }
       },
+      "Ensure.That/10.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Ensure.That.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Ensure.That.dll": {}
+        }
+      },
       "Microsoft.CodeCoverage/16.5.0": {
         "type": "package",
         "compile": {
@@ -1359,23 +1368,12 @@
           "build/netcoreapp1.0/xunit.runner.visualstudio.props": {}
         }
       },
-      "XeroChallenge.Application/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v3.1",
-        "dependencies": {
-          "XeroChallenge.Domain": "1.0.0",
-          "XeroChallenge.Infrastructure.DataAccess": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/XeroChallenge.Application.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/XeroChallenge.Application.dll": {}
-        }
-      },
       "XeroChallenge.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Microsoft.Extensions.Logging.Abstractions": "5.0.0"
+        },
         "compile": {
           "bin/placeholder/XeroChallenge.Domain.dll": {}
         },
@@ -1383,18 +1381,19 @@
           "bin/placeholder/XeroChallenge.Domain.dll": {}
         }
       },
-      "XeroChallenge.Infrastructure.DataAccess/1.0.0": {
+      "XeroChallenge.Infrastructure.Persistence/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
+          "Ensure.That": "10.0.0",
           "Microsoft.EntityFrameworkCore.Sqlite": "5.0.3",
           "XeroChallenge.Domain": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/XeroChallenge.Infrastructure.DataAccess.dll": {}
+          "bin/placeholder/XeroChallenge.Infrastructure.Persistence.dll": {}
         },
         "runtime": {
-          "bin/placeholder/XeroChallenge.Infrastructure.DataAccess.dll": {}
+          "bin/placeholder/XeroChallenge.Infrastructure.Persistence.dll": {}
         }
       }
     }
@@ -1429,6 +1428,23 @@
         "build/netstandard1.0/coverlet.core.pdb",
         "coverlet.collector.1.2.0.nupkg.sha512",
         "coverlet.collector.nuspec"
+      ]
+    },
+    "Ensure.That/10.0.0": {
+      "sha512": "+18R+FI7J0cVc8KwGmOJJ0C9YM2GQbQo407Bi0cqZUCjb7Nk/I0dXEeBwMlD5ramNfq264lJ7A8I0+1dZjgViw==",
+      "type": "package",
+      "path": "ensure.that/10.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ensure.that.10.0.0.nupkg.sha512",
+        "ensure.that.nuspec",
+        "lib/net451/Ensure.That.dll",
+        "lib/net451/Ensure.That.xml",
+        "lib/netstandard1.1/Ensure.That.dll",
+        "lib/netstandard1.1/Ensure.That.xml",
+        "lib/netstandard2.0/Ensure.That.dll",
+        "lib/netstandard2.0/Ensure.That.xml"
       ]
     },
     "Microsoft.CodeCoverage/16.5.0": {
@@ -4697,20 +4713,15 @@
         "xunit.runner.visualstudio.nuspec"
       ]
     },
-    "XeroChallenge.Application/1.0.0": {
-      "type": "project",
-      "path": "../XeroChallenge.Application/XeroChallenge.Application.csproj",
-      "msbuildProject": "../XeroChallenge.Application/XeroChallenge.Application.csproj"
-    },
     "XeroChallenge.Domain/1.0.0": {
       "type": "project",
       "path": "../XeroChallenge.Domain/XeroChallenge.Domain.csproj",
       "msbuildProject": "../XeroChallenge.Domain/XeroChallenge.Domain.csproj"
     },
-    "XeroChallenge.Infrastructure.DataAccess/1.0.0": {
+    "XeroChallenge.Infrastructure.Persistence/1.0.0": {
       "type": "project",
-      "path": "../XeroChallenge.Infrastructure.DataAccess/XeroChallenge.Infrastructure.DataAccess.csproj",
-      "msbuildProject": "../XeroChallenge.Infrastructure.DataAccess/XeroChallenge.Infrastructure.DataAccess.csproj"
+      "path": "../XeroChallenge.Infrastructure.DataAccess/XeroChallenge.Infrastructure.Persistence.csproj",
+      "msbuildProject": "../XeroChallenge.Infrastructure.DataAccess/XeroChallenge.Infrastructure.Persistence.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -4719,9 +4730,8 @@
       "Microsoft.Extensions.Configuration.Abstractions >= 5.0.0",
       "Microsoft.Extensions.Configuration.Json >= 5.0.0",
       "Microsoft.NET.Test.Sdk >= 16.5.0",
-      "XeroChallenge.Application >= 1.0.0",
       "XeroChallenge.Domain >= 1.0.0",
-      "XeroChallenge.Infrastructure.DataAccess >= 1.0.0",
+      "XeroChallenge.Infrastructure.Persistence >= 1.0.0",
       "coverlet.collector >= 1.2.0",
       "xunit >= 2.4.0",
       "xunit.runner.visualstudio >= 2.4.0"
@@ -4758,14 +4768,11 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\Malik\\source\\repos\\XeroChallenge\\XeroChallenge\\XeroChallenge.Application\\XeroChallenge.Application.csproj": {
-              "projectPath": "C:\\Users\\Malik\\source\\repos\\XeroChallenge\\XeroChallenge\\XeroChallenge.Application\\XeroChallenge.Application.csproj"
-            },
             "C:\\Users\\Malik\\source\\repos\\XeroChallenge\\XeroChallenge\\XeroChallenge.Domain\\XeroChallenge.Domain.csproj": {
               "projectPath": "C:\\Users\\Malik\\source\\repos\\XeroChallenge\\XeroChallenge\\XeroChallenge.Domain\\XeroChallenge.Domain.csproj"
             },
-            "C:\\Users\\Malik\\source\\repos\\XeroChallenge\\XeroChallenge\\XeroChallenge.Infrastructure.DataAccess\\XeroChallenge.Infrastructure.DataAccess.csproj": {
-              "projectPath": "C:\\Users\\Malik\\source\\repos\\XeroChallenge\\XeroChallenge\\XeroChallenge.Infrastructure.DataAccess\\XeroChallenge.Infrastructure.DataAccess.csproj"
+            "C:\\Users\\Malik\\source\\repos\\XeroChallenge\\XeroChallenge\\XeroChallenge.Infrastructure.DataAccess\\XeroChallenge.Infrastructure.Persistence.csproj": {
+              "projectPath": "C:\\Users\\Malik\\source\\repos\\XeroChallenge\\XeroChallenge\\XeroChallenge.Infrastructure.DataAccess\\XeroChallenge.Infrastructure.Persistence.csproj"
             }
           }
         }

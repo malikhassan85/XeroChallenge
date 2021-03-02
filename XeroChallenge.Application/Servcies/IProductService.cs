@@ -1,26 +1,29 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 using XeroChallenge.Application.DTOs;
 
 namespace XeroChallenge.Application.Services
 {
     public interface IProductService
     {
-        IEnumerable<ProductDto> GetAllProducts();
+        Task<IEnumerable<ProductDto>> GetAllProductsByName(string name);
 
-        ProductDto GetProduct(Guid productId);
+        Task<ProductDto> GetProduct(Guid productId);
 
-        void DeleteProduct(Guid productIdId);
+        Task DeleteProduct(Guid productIdId);
 
-        Guid SaveProduct(ProductDto product);
+        Task<Guid> CreateProduct(ProductDto productDto);
 
-        IEnumerable<ProductOptionDto> GetProductOptions(Guid productId);
+        Task<Guid> UpdateProduct(ProductDto productDto);
 
-        ProductOptionDto GetProductOption(Guid productId, Guid optionId);
+        Task<IEnumerable<ProductOptionDto>> GetProductOptions(Guid productId);
 
-        Guid SaveProductOption(ProductOptionDto productOption);
+        Task<ProductOptionDto> GetProductOption(Guid productId, Guid optionId);
 
-        void DeleteProductOption(Guid productId, Guid optionId);
+        Task<Guid> SaveProductOption(ProductOptionDto productOption);
+
+        Task DeleteProductOption(Guid productId, Guid optionId);
     }
 }

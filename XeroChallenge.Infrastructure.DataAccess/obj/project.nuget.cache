@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Gdu61oiK3VD+Y6M4LUWR2mEtDALlkzEJ+Xn+SDGwlqYc7b0jCz5BFna1adqz2ExuhYWCg6cjSBWAgFYGWBboCQ==",
+  "dgSpecHash": "5SqVQVjY+SvtKgol8ng+6/QLa9Ody4AamqzMEDl/GJfI6zqffIwFGc4WvFPRpCxDag9sBEjlY3z9+H7K0/WhEA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Malik\\source\\repos\\XeroChallenge\\XeroChallenge\\XeroChallenge.Infrastructure.DataAccess\\XeroChallenge.Infrastructure.DataAccess.csproj",
+  "projectFilePath": "C:\\Users\\Malik\\source\\repos\\XeroChallenge\\XeroChallenge\\XeroChallenge.Infrastructure.DataAccess\\XeroChallenge.Infrastructure.Persistence.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Malik\\.nuget\\packages\\ensure.that\\10.0.0\\ensure.that.10.0.0.nupkg.sha512",
     "C:\\Users\\Malik\\.nuget\\packages\\microsoft.data.sqlite.core\\5.0.3\\microsoft.data.sqlite.core.5.0.3.nupkg.sha512",
     "C:\\Users\\Malik\\.nuget\\packages\\microsoft.dotnet.platformabstractions\\3.1.6\\microsoft.dotnet.platformabstractions.3.1.6.nupkg.sha512",
     "C:\\Users\\Malik\\.nuget\\packages\\microsoft.entityframeworkcore\\5.0.3\\microsoft.entityframeworkcore.5.0.3.nupkg.sha512",

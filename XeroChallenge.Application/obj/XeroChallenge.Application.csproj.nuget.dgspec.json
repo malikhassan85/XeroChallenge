@@ -34,8 +34,8 @@
               "C:\\Users\\Malik\\source\\repos\\XeroChallenge\\XeroChallenge\\XeroChallenge.Domain\\XeroChallenge.Domain.csproj": {
                 "projectPath": "C:\\Users\\Malik\\source\\repos\\XeroChallenge\\XeroChallenge\\XeroChallenge.Domain\\XeroChallenge.Domain.csproj"
               },
-              "C:\\Users\\Malik\\source\\repos\\XeroChallenge\\XeroChallenge\\XeroChallenge.Infrastructure.DataAccess\\XeroChallenge.Infrastructure.DataAccess.csproj": {
-                "projectPath": "C:\\Users\\Malik\\source\\repos\\XeroChallenge\\XeroChallenge\\XeroChallenge.Infrastructure.DataAccess\\XeroChallenge.Infrastructure.DataAccess.csproj"
+              "C:\\Users\\Malik\\source\\repos\\XeroChallenge\\XeroChallenge\\XeroChallenge.Infrastructure.DataAccess\\XeroChallenge.Infrastructure.Persistence.csproj": {
+                "projectPath": "C:\\Users\\Malik\\source\\repos\\XeroChallenge\\XeroChallenge\\XeroChallenge.Infrastructure.DataAccess\\XeroChallenge.Infrastructure.Persistence.csproj"
               }
             }
           }
@@ -49,6 +49,12 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Ensure.That": {
+              "target": "Package",
+              "version": "[10.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -106,6 +112,12 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.Extensions.Logging.Abstractions": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -125,12 +137,12 @@
         }
       }
     },
-    "C:\\Users\\Malik\\source\\repos\\XeroChallenge\\XeroChallenge\\XeroChallenge.Infrastructure.DataAccess\\XeroChallenge.Infrastructure.DataAccess.csproj": {
+    "C:\\Users\\Malik\\source\\repos\\XeroChallenge\\XeroChallenge\\XeroChallenge.Infrastructure.DataAccess\\XeroChallenge.Infrastructure.Persistence.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Malik\\source\\repos\\XeroChallenge\\XeroChallenge\\XeroChallenge.Infrastructure.DataAccess\\XeroChallenge.Infrastructure.DataAccess.csproj",
-        "projectName": "XeroChallenge.Infrastructure.DataAccess",
-        "projectPath": "C:\\Users\\Malik\\source\\repos\\XeroChallenge\\XeroChallenge\\XeroChallenge.Infrastructure.DataAccess\\XeroChallenge.Infrastructure.DataAccess.csproj",
+        "projectUniqueName": "C:\\Users\\Malik\\source\\repos\\XeroChallenge\\XeroChallenge\\XeroChallenge.Infrastructure.DataAccess\\XeroChallenge.Infrastructure.Persistence.csproj",
+        "projectName": "XeroChallenge.Infrastructure.Persistence",
+        "projectPath": "C:\\Users\\Malik\\source\\repos\\XeroChallenge\\XeroChallenge\\XeroChallenge.Infrastructure.DataAccess\\XeroChallenge.Infrastructure.Persistence.csproj",
         "packagesPath": "C:\\Users\\Malik\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Malik\\source\\repos\\XeroChallenge\\XeroChallenge\\XeroChallenge.Infrastructure.DataAccess\\obj\\",
         "projectStyle": "PackageReference",

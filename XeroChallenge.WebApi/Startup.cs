@@ -7,9 +7,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using XeroChallenge.Application.Services;
 using XeroChallenge.Domain.Repositories;
-using XeroChallenge.Infrastructure.DataAccess;
+using XeroChallenge.Domain.Services;
+using XeroChallenge.Infrastructure.Persistence.Repositories;
 
 namespace XeroChallenge.WebApi
 {
@@ -30,6 +30,11 @@ namespace XeroChallenge.WebApi
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+            }
+            else
+            {
+                app.UseExceptionHandler("/error");
+                app.UseHsts();
             }
 
             app.UseHttpsRedirection();
