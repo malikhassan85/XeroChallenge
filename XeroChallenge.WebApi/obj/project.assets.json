@@ -2,15 +2,6 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v3.1": {
-      "Ensure.That/10.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/netstandard2.0/Ensure.That.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/Ensure.That.dll": {}
-        }
-      },
       "Microsoft.Data.Sqlite.Core/5.0.3": {
         "type": "package",
         "dependencies": {
@@ -894,7 +885,6 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
-          "Ensure.That": "10.0.0",
           "Microsoft.EntityFrameworkCore.Sqlite": "5.0.3",
           "XeroChallenge.Domain": "1.0.0"
         },
@@ -908,23 +898,6 @@
     }
   },
   "libraries": {
-    "Ensure.That/10.0.0": {
-      "sha512": "+18R+FI7J0cVc8KwGmOJJ0C9YM2GQbQo407Bi0cqZUCjb7Nk/I0dXEeBwMlD5ramNfq264lJ7A8I0+1dZjgViw==",
-      "type": "package",
-      "path": "ensure.that/10.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "ensure.that.10.0.0.nupkg.sha512",
-        "ensure.that.nuspec",
-        "lib/net451/Ensure.That.dll",
-        "lib/net451/Ensure.That.xml",
-        "lib/netstandard1.1/Ensure.That.dll",
-        "lib/netstandard1.1/Ensure.That.xml",
-        "lib/netstandard2.0/Ensure.That.dll",
-        "lib/netstandard2.0/Ensure.That.xml"
-      ]
-    },
     "Microsoft.Data.Sqlite.Core/5.0.3": {
       "sha512": "4nfSZVXex4PqQkcVu78/W0E2p3m24mwwqwMadnTPukHWx9Mh234WKg95qG9hs/ynULVGMfMyA1eUJdYDMeKFPw==",
       "type": "package",
@@ -2996,6 +2969,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "Microsoft.EntityFrameworkCore.Sqlite >= 5.0.3",
       "Serilog >= 2.10.0",
       "Serilog.AspNetCore >= 3.4.0",
       "Serilog.Sinks.RollingFile >= 3.3.0",
@@ -3053,6 +3027,10 @@
       "netcoreapp3.1": {
         "targetAlias": "netcoreapp3.1",
         "dependencies": {
+          "Microsoft.EntityFrameworkCore.Sqlite": {
+            "target": "Package",
+            "version": "[5.0.3, )"
+          },
           "Serilog": {
             "target": "Package",
             "version": "[2.10.0, )"

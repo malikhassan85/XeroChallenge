@@ -39,6 +39,45 @@ namespace XeroChallenge.Domain.UnitTesting.Entities
             Assert.Equal(2, product.Options.Count);
         }
 
+        [Fact]
+        public void AddProductOption_ProductHasOptions_NewItemIsAdded()
+        {
+            //Prepare
+            var product = GetTestingProduct();
+            var productOption = new ProductOption
+            {
+                Name = "Third Option",
+                Description = "Third Option Description"
+            };
+
+            //Act 
+            product.AddProductOption(productOption);
+
+            //Assert
+            Assert.NotNull(product.Options);
+            Assert.Equal(3, product.Options.Count);
+        }
+
+
+        [Fact]
+        public void AddProductOption_ProductHasNoOptions_NewItemIsAdded()
+        {
+            //Prepare
+            var product = GetTestingProduct();
+            product.Options = null;
+            var productOption = new ProductOption
+            {
+                Name = "Third Option",
+                Description = "Third Option Description"
+            };
+
+            //Act 
+            product.AddProductOption(productOption);
+
+            //Assert
+            Assert.NotNull(product.Options);
+            Assert.Single(product.Options);
+        }
 
         private Product GetTestingProduct()
         {

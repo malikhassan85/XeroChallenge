@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System;
@@ -9,19 +11,34 @@ using System.Linq;
 using System.Threading.Tasks;
 using XeroChallenge.Domain.Repositories;
 using XeroChallenge.Domain.Services;
+using XeroChallenge.Infrastructure.Persistence.Extensions;
 using XeroChallenge.Infrastructure.Persistence.Repositories;
 
 namespace XeroChallenge.WebApi
 {
     public class Startup
     {
+        public Startup(IConfiguration configuration)
+        {
+            this.Configuration = configuration;
+        }
+
+        private IConfiguration Configuration { get; }
+
         // This method gets called by the runtime. Use this method to add services to the container.
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddSingleton<IProductService, ProductService>();
-            services.AddSingleton<IProductRepository, ProductRepository>();
+
+            // Database Context Options
+            void DbContextOptionsBuilder(DbContextOptionsBuilder builder) =>
+                builder.UseSqlite(this.Configuration.GetConnectionString("Database"));
+
+            // Databases
+            services.AddDatabase(DbContextOptionsBuilder);
+
+            services.AddScoped<IProductService, ProductService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

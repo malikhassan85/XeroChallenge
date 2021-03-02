@@ -29,11 +29,12 @@ namespace XeroChallenge.Domain.Entities
             Options.Remove(option);
         }
 
-        internal void AddProductOption(ProductOption productOption)
+        public void AddProductOption(ProductOption productOption)
         {
             if (Options == null)
                 Options = new List<ProductOption>();
 
+            productOption.Product = this;
             Options.Add(productOption);
         }
     }

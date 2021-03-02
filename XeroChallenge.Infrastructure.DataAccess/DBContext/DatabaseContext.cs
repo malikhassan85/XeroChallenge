@@ -6,11 +6,11 @@ using XeroChallenge.Domain.Entities;
 
 namespace XeroChallenge.Infrastructure.Persistence.DBContext
 {
-    public class ProductsDbContext : DbContext
+    public class DatabaseContext : DbContext
     {
         public DbSet<Product> Products { get; set; }
 
-        public ProductsDbContext(DbContextOptions<ProductsDbContext> options) : base(options)
+        public DatabaseContext(DbContextOptions<DatabaseContext> options) : base(options)
         {
         }
 
