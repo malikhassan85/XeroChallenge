@@ -1,9 +1,0 @@
-C:\Users\Malik\source\repos\XeroChallenge\XeroChallenge\XeroChallenge.Domain\bin\Release\netcoreapp3.1\XeroChallenge.Domain.deps.json
-C:\Users\Malik\source\repos\XeroChallenge\XeroChallenge\XeroChallenge.Domain\bin\Release\netcoreapp3.1\XeroChallenge.Domain.dll
-C:\Users\Malik\source\repos\XeroChallenge\XeroChallenge\XeroChallenge.Domain\bin\Release\netcoreapp3.1\XeroChallenge.Domain.pdb
-C:\Users\Malik\source\repos\XeroChallenge\XeroChallenge\XeroChallenge.Domain\obj\Release\netcoreapp3.1\XeroChallenge.Domain.csprojAssemblyReference.cache
-C:\Users\Malik\source\repos\XeroChallenge\XeroChallenge\XeroChallenge.Domain\obj\Release\netcoreapp3.1\XeroChallenge.Domain.AssemblyInfoInputs.cache
-C:\Users\Malik\source\repos\XeroChallenge\XeroChallenge\XeroChallenge.Domain\obj\Release\netcoreapp3.1\XeroChallenge.Domain.AssemblyInfo.cs
-C:\Users\Malik\source\repos\XeroChallenge\XeroChallenge\XeroChallenge.Domain\obj\Release\netcoreapp3.1\XeroChallenge.Domain.csproj.CoreCompileInputs.cache
-C:\Users\Malik\source\repos\XeroChallenge\XeroChallenge\XeroChallenge.Domain\obj\Release\netcoreapp3.1\XeroChallenge.Domain.dll
-C:\Users\Malik\source\repos\XeroChallenge\XeroChallenge\XeroChallenge.Domain\obj\Release\netcoreapp3.1\XeroChallenge.Domain.pdb
