@@ -7,7 +7,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
 using XeroChallenge.Domain.Repositories;
 using XeroChallenge.Domain.Services;
@@ -33,7 +35,7 @@ namespace XeroChallenge.WebApi
 
             // Database Context Options
             void DbContextOptionsBuilder(DbContextOptionsBuilder builder) =>
-                builder.UseSqlite(this.Configuration.GetConnectionString("Database"));
+                builder.UseSqlite(string.Format(this.Configuration.GetConnectionString("DatabaseConnection"), Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)));
 
             // Databases
             services.AddDatabase(DbContextOptionsBuilder);

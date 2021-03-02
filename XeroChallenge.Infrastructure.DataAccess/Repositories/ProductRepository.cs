@@ -17,13 +17,15 @@ namespace XeroChallenge.Infrastructure.Persistence.Repositories
 
         private ILogger<ProductRepository> _Logger;
         private DbContextOptionsBuilder<DatabaseContext> _DbContextBuilder = new DbContextOptionsBuilder<DatabaseContext>();
-        public ProductRepository(DatabaseContext dbContext)
+        public ProductRepository(DatabaseContext dbContext, ILogger<ProductRepository> logger)
         {
             // Store the context
             this.Context = dbContext;
 
             // Initialise the DbSet
             this.Entities = this.Context.Set<Product>();
+
+            _Logger = logger;
         }
 
         /// <summary>

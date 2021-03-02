@@ -56,7 +56,7 @@ namespace XeroChallenge.WebApi.Controllers
 
         // PUT api/<ProductsController>/DF2E9176-35EE-4F0A-AE55-83023D2DB1A3
         [HttpPut("{id}")]
-        public async Task<IActionResult> Put(Guid id, [FromBody] ProductDto productDto)
+        public async Task<IActionResult> Put(Guid id, ProductDto productDto)
         {
             productDto.Id = id;
             await _productService.UpdateProduct(productDto.ToDomainEntity());
@@ -71,19 +71,19 @@ namespace XeroChallenge.WebApi.Controllers
             return Ok();
         }
 
-        [HttpGet("{productId}/options")]
-        public async Task<IActionResult> GetProductOptions(Guid productId)
+        [HttpGet("{id}/options")]
+        public async Task<IActionResult> GetProductOptions(Guid id)
         {
-            var productOptions = await _productService.GetProductOptions(productId);
+            var productOptions = await _productService.GetProductOptions(id);
             return Ok(productOptions.ToList().ToDto());
         }
 
-        [HttpGet("{productId}/options/{Id}")]
-        public async Task<IActionResult> GetProductOption(Guid productId, Guid id)
+        [HttpGet("{id}/options/{optionId}")]
+        public async Task<IActionResult> GetProductOption(Guid id, Guid optionId)
         {
             try
             {
-                var productOption = await _productService.GetProductOption(productId, id);
+                var productOption = await _productService.GetProductOption(id, optionId);
                 return Ok(productOption.ToDto());
             }
             catch(ProductOptionNotFoundException)
@@ -92,24 +92,25 @@ namespace XeroChallenge.WebApi.Controllers
             }
         }
 
-        [HttpPost("{productId}/options/")]
-        public async Task<IActionResult> CreateProductOption(Guid productId, ProductOptionDto productOption)
+        [HttpPost("{id}/options/")]
+        public async Task<IActionResult> CreateProductOption(Guid id, ProductOptionDto productOption)
         {
-            await _productService.CreateProductOption(productId, productOption.ToDomainEntity());
+            await _productService.CreateProductOption(id, productOption.ToDomainEntity());
             return Ok();
         }
 
-        [HttpPut("{productId}/options/{Id}")]
-        public async Task<IActionResult> UpdateProductOption(Guid productId, ProductOptionDto productOption)
+        [HttpPut("{id}/options/{optionId}")]
+        public async Task<IActionResult> UpdateProductOption(Guid id, Guid optionId, ProductOptionDto productOption)
         {
-            await _productService.UpdateProductOption(productId, productOption.ToDomainEntity());
+            productOption.Id = optionId;
+            await _productService.UpdateProductOption(id, productOption.ToDomainEntity());
             return Ok();
         }
 
-        [HttpDelete("{productId}/options/{Id}")]
-        public async Task<IActionResult> DeleteProductOption(Guid productId, Guid id)
+        [HttpDelete("{id}/options/{optionId}")]
+        public async Task<IActionResult> DeleteProductOption(Guid id, Guid optionId)
         {
-             await _productService.DeleteProductOption(productId, id);
+             await _productService.DeleteProductOption(id, optionId);
             return Ok();
         }
     }

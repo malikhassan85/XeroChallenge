@@ -24,6 +24,7 @@
     ".NETCoreApp,Version=v3.1": {
       "XeroChallenge.WebApi/1.0.0": {
         "dependencies": {
+          "Microsoft.EntityFrameworkCore.Sqlite": "5.0.3",
           "Serilog": "2.10.0",
           "Serilog.AspNetCore": "3.4.0",
           "Serilog.Sinks.RollingFile": "3.3.0",
@@ -303,17 +304,6 @@
         },
         "compile": {
           "XeroChallenge.WebApi.dll": {}
-        }
-      },
-      "Ensure.That/10.0.0": {
-        "runtime": {
-          "lib/netstandard2.0/Ensure.That.dll": {
-            "assemblyVersion": "10.0.0.0",
-            "fileVersion": "10.0.0.0"
-          }
-        },
-        "compile": {
-          "lib/netstandard2.0/Ensure.That.dll": {}
         }
       },
       "Microsoft.Data.Sqlite.Core/5.0.3": {
@@ -1093,7 +1083,6 @@
       },
       "XeroChallenge.Infrastructure.Persistence/1.0.0": {
         "dependencies": {
-          "Ensure.That": "10.0.0",
           "Microsoft.EntityFrameworkCore.Sqlite": "5.0.3",
           "XeroChallenge.Domain": "1.0.0"
         },
@@ -2719,13 +2708,6 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
-    },
-    "Ensure.That/10.0.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-+18R+FI7J0cVc8KwGmOJJ0C9YM2GQbQo407Bi0cqZUCjb7Nk/I0dXEeBwMlD5ramNfq264lJ7A8I0+1dZjgViw==",
-      "path": "ensure.that/10.0.0",
-      "hashPath": "ensure.that.10.0.0.nupkg.sha512"
     },
     "Microsoft.Data.Sqlite.Core/5.0.3": {
       "type": "package",

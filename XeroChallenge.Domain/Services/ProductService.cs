@@ -56,7 +56,7 @@ namespace XeroChallenge.Domain.Services
                 throw new ArgumentNullException(nameof(product));
 
             if (product.IsNew)
-                throw new ArgumentNullException(nameof(product.Id), "Id can't be empty when updating an existing product");
+                throw new ArgumentException(nameof(product.Id), "Id can't be empty when updating an existing product");
 
             _Logger.LogInformation("Call repository to update product: {Id}", product.Id);
             await _productRepository.Save(product);
